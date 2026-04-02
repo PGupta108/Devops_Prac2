@@ -1,0 +1,25 @@
+pipeline {
+
+agent any
+
+stages {
+
+stage('Install Dependencies'){
+steps{
+dir('C:\\Users\\ASUS\\Desktop\\College\\Sem6\\DevOps\\Chinmay_CA2') {
+bat 'pip install selenium'
+}
+}
+}
+
+stage('Run Selenium Test'){
+steps{
+dir('C:\\Users\\ASUS\\Desktop\\College\\Sem6\\DevOps\\Chinmay_CA2') {
+bat 'python selenium_test.py'
+}
+}
+}
+
+}
+
+}
